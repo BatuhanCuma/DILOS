@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "id": "mood_check",
+      "text": "Bugün kafanda ne var?",
+      "type": "open",
+      "category": "mood"
+    },
+    {
+      "id": "daily_share",
+      "text": "Bugünden minik bir şey paylaş — iyi ya da kötü.",
+      "type": "open",
+      "category": "reflection"
+    },
+    {
+      "id": "positive_moment",
+      "text": "Bugün sana iyi gelen bir şey oldu mu?",
+      "type": "open",
+      "category": "gratitude"
+    },
+    {
+      "id": "recent_thought",
+      "text": "Son zamanlarda seni etkileyen bir fikir var mı?",
+      "type": "open",
+      "category": "thought"
+    },
+    {
+      "id": "energy_level",
+      "text": "Şu an enerjin nasıl hissettiriyor sana?",
+      "type": "open",
+      "category": "mood"
+    },
+    {
+      "id": "one_thing",
+      "text": "Bugün bir şeyi değiştirebilseydin ne olurdu?",
+      "type": "open",
+      "category": "reflection"
+    }
+  ]
+}

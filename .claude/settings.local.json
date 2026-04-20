@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo *)",
+      "Bash(curl -s https://raw.githubusercontent.com/affaan-m/everything-claude-code/main/README.md)",
+      "WebFetch(domain:github.com)",
+      "Read(//tmp/**)",
+      "Read(//c/Users/Batu/AppData/Local/Temp/everything-claude-code/**)",
+      "PowerShell(Set-Location /tmp/everything-claude-code; pwsh install.ps1 --profile full 2>&1)",
+      "Bash(bash install.sh --profile full)",
+      "WebSearch",
+      "Bash(flutter --version)",
+      "Bash(flutter create *)",
+      "Bash(flutter pub *)",
+      "Bash(flutter analyze *)",
+      "Bash(flutter test *)",
+      "Bash(dart run *)",
+      "Bash(mkdir -p C:/Projects/DILOS/.claude/PRPs/plans/completed)",
+      "Bash(mv \"C:/Projects/DILOS/.claude/PRPs/plans/phase-5-notifications.plan.md\" \"C:/Projects/DILOS/.claude/PRPs/plans/completed/\")",
+      "Bash(flutter devices *)",
+      "Bash(flutter run *)",
+      "Bash(xargs grep *)",
+      "Bash(mkdir -p C:/Projects/DILOS/.claude/PRPs/reports)",
+      "Bash(git -C C:/Projects/DILOS status)",
+      "Bash(gh auth *)",
+      "Bash(where gh *)",
+      "Bash(winget install *)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(gh --version)",
+      "Read(//c/Program Files/GitHub CLI/**)",
+      "Read(//c/Users/Batu/AppData/Local/**)",
+      "Bash(/c/Program Files/GitHub CLI/gh.exe auth *)",
+      "Bash(\"/c/Program Files/GitHub *)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth status)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
