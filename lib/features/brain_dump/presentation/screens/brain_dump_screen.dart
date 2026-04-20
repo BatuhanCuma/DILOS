@@ -44,7 +44,7 @@ class _BrainDumpScreenState extends ConsumerState<BrainDumpScreen> {
         elevation: 0,
       ),
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(AppSpacing.lg),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,8 +108,9 @@ class _BrainDumpScreenState extends ConsumerState<BrainDumpScreen> {
               if (state.recentEntries.isNotEmpty) ...[
                 Text('Geçmiş', style: theme.textTheme.titleMedium),
                 const SizedBox(height: AppSpacing.sm),
-                Expanded(
-                  child: ListView.separated(
+                ListView.separated(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: state.recentEntries.length,
                     separatorBuilder: (_, __) =>
                         const SizedBox(height: AppSpacing.sm),
@@ -142,7 +143,6 @@ class _BrainDumpScreenState extends ConsumerState<BrainDumpScreen> {
                         ),
                       );
                     },
-                  ),
                 ),
               ] else ...[
                 const SizedBox(height: AppSpacing.lg),
