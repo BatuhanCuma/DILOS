@@ -27,8 +27,8 @@ void main() {
       );
 
       final container = ProviderContainer(overrides: [
-        dashboardRepositoryProvider.overrideWithValue(
-          FakeDashboardRepository(fakeMetrics),
+        dashboardRepositoryProvider.overrideWith(
+          (_) async => FakeDashboardRepository(fakeMetrics),
         ),
       ]);
       addTearDown(container.dispose);
@@ -50,8 +50,8 @@ void main() {
       );
 
       final container = ProviderContainer(overrides: [
-        dashboardRepositoryProvider.overrideWithValue(
-          FakeDashboardRepository(fakeMetrics),
+        dashboardRepositoryProvider.overrideWith(
+          (_) async => FakeDashboardRepository(fakeMetrics),
         ),
       ]);
       addTearDown(container.dispose);

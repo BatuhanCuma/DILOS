@@ -5,7 +5,7 @@ import 'package:dilos/core/database/isar_provider.dart';
 
 final dashboardMetricsProvider =
     FutureProvider.autoDispose<DashboardMetrics>((ref) async {
-  final repo = ref.watch(dashboardRepositoryProvider);
+  final repo = await ref.watch(dashboardRepositoryProvider.future);
   return repo.getMetrics();
 });
 

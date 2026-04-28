@@ -61,11 +61,8 @@ final settingsRepositoryProvider = Provider<SettingsRepository>((ref) {
   );
 });
 
-final dashboardRepositoryProvider = Provider<DashboardRepository>((ref) {
-  final isarAsync = ref.watch(isarProvider);
-  return isarAsync.when(
-    data: (isar) => IsarDashboardRepository(isar),
-    loading: () => throw StateError('Isar henüz hazır değil'),
-    error: (e, _) => throw StateError('Isar hatası: $e'),
-  );
+final dashboardRepositoryProvider =
+    FutureProvider<DashboardRepository>((ref) async {
+  final isar = await ref.watch(isarProvider.future);
+  return IsarDashboardRepository(isar);
 });

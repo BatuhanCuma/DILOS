@@ -48,8 +48,11 @@ class HomeScreen extends ConsumerWidget {
           loading: () => const Center(
             child: CircularProgressIndicator(color: AppColors.primary),
           ),
-          error: (e, _) => Center(
-            child: Text('$e', style: const TextStyle(color: AppColors.error)),
+          error: (_, __) => const Center(
+            child: Text(
+              'Veriler yüklenemedi.',
+              style: TextStyle(color: AppColors.error),
+            ),
           ),
           data: (metrics) => _DashboardBody(
             narrative: narrative,
