@@ -12,6 +12,8 @@ import '../../features/journal/domain/repositories/journal_repository.dart';
 import '../../features/settings/data/models/notification_config.dart';
 import '../../features/settings/data/repositories/settings_repository_impl.dart';
 import '../../features/settings/domain/repositories/settings_repository.dart';
+import '../../features/dashboard/data/repositories/dashboard_repository_impl.dart';
+import '../../features/dashboard/domain/repositories/dashboard_repository.dart';
 import 'isar_service.dart';
 
 final isarProvider = FutureProvider<Isar>((ref) async {
@@ -57,4 +59,10 @@ final settingsRepositoryProvider = Provider<SettingsRepository>((ref) {
     loading: () => throw StateError('Isar henüz hazır değil'),
     error: (e, _) => throw StateError('Isar hatası: $e'),
   );
+});
+
+final dashboardRepositoryProvider =
+    FutureProvider<DashboardRepository>((ref) async {
+  final isar = await ref.watch(isarProvider.future);
+  return IsarDashboardRepository(isar);
 });
