@@ -30,8 +30,9 @@ class DashboardCalculator {
     final stabilityScore = (uniqueDays.length / 30).clamp(0.0, 1.0);
 
     final allDates = [...sessionDates, ...journalDates, ...brainDumpDates];
-    final lastActivityDate =
-        allDates.isEmpty ? null : (List.of(allDates)..sort()).last;
+    final lastActivityDate = allDates.isEmpty
+        ? null
+        : allDates.reduce((a, b) => a.isAfter(b) ? a : b);
 
     return DashboardMetrics(
       clarityScore: clarityScore,

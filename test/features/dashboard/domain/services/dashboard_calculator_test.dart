@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dilos/features/dashboard/domain/entities/dashboard_metrics.dart';
 import 'package:dilos/features/dashboard/domain/services/dashboard_calculator.dart';
 
 void main() {

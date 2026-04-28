@@ -26,4 +26,27 @@ class DashboardMetrics {
     totalBrainDumps: 0,
     lastActivityDate: null,
   );
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DashboardMetrics &&
+          clarityScore == other.clarityScore &&
+          stabilityScore == other.stabilityScore &&
+          explorationScore == other.explorationScore &&
+          totalSessions == other.totalSessions &&
+          totalJournals == other.totalJournals &&
+          totalBrainDumps == other.totalBrainDumps &&
+          lastActivityDate == other.lastActivityDate;
+
+  @override
+  int get hashCode => Object.hash(
+        clarityScore,
+        stabilityScore,
+        explorationScore,
+        totalSessions,
+        totalJournals,
+        totalBrainDumps,
+        lastActivityDate,
+      );
 }
